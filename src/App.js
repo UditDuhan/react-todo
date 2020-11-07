@@ -4,7 +4,6 @@ import "./App.css";
 import TodoList from "./components/TodoList";
 import Header from "./components/layout/header";
 import AddTodo from "./components/AddTodo";
-import About from "./components/pages/About";
 // import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 
@@ -54,13 +53,8 @@ const App = () => {
   };
 
   return (
-    <Router>
       <div className="App">
         <div className="container">
-          <Route
-            exact
-            path="/"
-            render={(props) => (
               <React.Fragment>
                 <Header />
                 <AddTodo addTodo={addTodo} />
@@ -70,12 +64,8 @@ const App = () => {
                   deleteTodo={deleteTodo}
                 />
               </React.Fragment>
-            )}
-          />
-          <Route path="/about" component={About} />
         </div>
       </div>
-    </Router>
   );
 };
 
