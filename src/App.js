@@ -52,6 +52,7 @@ const App = () => {
   };
 
   return (
+    <Router basename={window.location.pathname || ''}>
       <div className="App">
         <div className="container">
               <React.Fragment>
@@ -65,6 +66,7 @@ const App = () => {
               </React.Fragment>
         </div>
       </div>
+    </Router>
   );
 };
 
